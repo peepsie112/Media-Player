@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Audio/Video Library</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+
+<div class="controls">
+	<input class="control seek" data-control="seek" type="range" value="0" max="100" step="0.01">
+	<div class="control-bg">
+		<div class="control toggle" data-control="toggle" data-change="pause"><i class="fa fa-play"></i><i class="fa fa-pause"></i></div>
+		<input class="control volume" data-control="volume" type="range" value="1" min="0" max="1" step="0.01">
+	</div>
+</div>
+
+<audio id="player">
+	<source src="movie.mp4">
+</audio>
+
+
+
+<div class="video">
+	<video id="video-player">
+		<source src="movie.mp4">
+	</video>
+	
+	<div class="video-controls">
+		<input class="video-control seek" data-control="seek" type="range" value="0" max="100" step="0.01">
+		<div class="video-control-bg">
+			<div class="video-control toggle" data-control="toggle" data-change="pause"><i class="fa fa-play"></i><i class="fa fa-pause"></i></div>
+			<input class="video-control volume" data-control="volume" type="range" value="1" min="0" max="1" step="0.01">
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+
+	audio = new Media("player", "control");
+	video = new Media("video-player", "video-control");
+
+</script>
+</body>
+</html>
